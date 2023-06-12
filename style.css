@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-color: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1),
+              -10px -10px 30px rgba(255, 255, 255, 0.5),
+              inset 5px 5px 10px #D1D1D1,
+              inset -5px -5px 10px #FFFFFF;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #837bb1;
+    text-align: center;
+    margin-bottom: 40px;
+    animation-name: tituloAnimado;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes tituloAnimado {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+}
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: medium;
+    color: #837bb1;
+    text-align: center;
+    margin-bottom: 40px;
+    animation-name: tituloAnimado;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes tituloAnimado {
+from {
+  transform: translateY(20px);
+  opacity: 0;
+}
+to {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+  
+form {
+  width: 100%;
+  max-width: 500px;
+}
+  
+label {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #b9b4d9;
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 25%;
+}
+
+
+input[type="number"]:focus {
+    outline: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#remuneracion {
+background: #99979750;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #b9b4d9;
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+  width: 26%;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background-color: #b9b4d9;
+  color: #FFFFFF;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-oscuro {
+  margin-top: 40px ;
+}
+
+button:hover {
+background-color: #7f75a9;
+transform: translateY(-5px);
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}      
+
+p {
+    display: flex;
+    font-size: 1.2rem;
+    color: #828282;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 20%;
+    width: 100%;
+    background-color: transparent;
+
+
+}
+
+.author {
+    font-size: small;
+    margin: 10px;
+    font-weight: lighter;
+}
+
+
+
+
+/*----------- modo oscuro----------- */    
+
+body.dark-mode {
+background-color: #1c1c1c;
+color: #f5f5f5;
+
+}
+body.dark-mode .container {
+background-color: #2c2c2c;
+box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5),
+    -10px -10px 30px rgba(255, 255, 255, 0.05),
+    inset 5px 5px 10px #2A2A2A,
+    inset -5px -5px 10px #3D3D3D;
+
+}
+
+body.dark-mode input[type="number"],
+body.dark-mode select,
+body.dark-mode button {
+background-color: #3c3c3c;
+color: #f5f5f5;
+}
+
+body.dark-mode label {
+background-color: transparent;
+color: #d9d9d9;
+}
+
+body.dark-mode button:hover {
+background-color: #f5f5f5;
+color: #3c3c3c;
+}
+
+@media screen and (max-width: 600px) {
+  /* Estilos para dispositivos móviles */
+  body {
+    min-height: auto;
+    margin: 20px;
+  }
+  .container {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 10px 0 20px;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  form {
+    max-width: 100%;
+  }
+  input[type="number"], select {
+    width: 100%;
+  }
+  button {
+    margin-top: 20px;
+  }
+  .boton-oscuro {
+  margin-top: 10px ;
+}
+}
